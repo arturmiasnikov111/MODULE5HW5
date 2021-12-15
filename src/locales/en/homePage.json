@@ -1,0 +1,9 @@
+{
+    "tabs": {
+      "user": "User",
+      "users": "Users list",
+      "login": "Login",
+      "resource": "Resource",
+      "resourceList": "Resource List"
+    }
+}
