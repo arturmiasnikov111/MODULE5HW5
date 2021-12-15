@@ -38,6 +38,7 @@ export default class ResourceStore {
          } catch (e) {
            if (e instanceof Error) {
                this.queryString = '';
+               this.resource = null;
                this.error = e.message;
            }
          }

@@ -38,6 +38,7 @@ export default class UserStore {
           } catch (e) {
             if (e instanceof Error) {
                 this.queryString = '';
+                this.user = null;
                 this.error = e.message;
             }
           }
