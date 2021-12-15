@@ -32,9 +32,7 @@ export default class UserStore {
             }
             const result = await this.userService.getById(id);
             runInAction(()=> {
-                this.user = {
-                    ...result
-                };
+                this.user = result
             });
             
           } catch (e) {

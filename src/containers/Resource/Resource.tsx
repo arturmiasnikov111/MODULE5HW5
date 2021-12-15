@@ -22,7 +22,6 @@ const Resource = observer(() => {
               type="number"
               value={store.queryString}
               onChange={(ev)=> {store.changeQueryString(ev.target.value)}}
-              isInvalid={!!store.error}
               placeholder={t('placeholder')}
             />
             <ButtonSpinner

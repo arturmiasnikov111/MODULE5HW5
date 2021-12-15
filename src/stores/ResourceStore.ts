@@ -32,9 +32,7 @@ export default class ResourceStore {
            }
            const result = await this.resourceService.getById(id);
            runInAction(()=> {
-               this.resource = {
-                   ...result
-               };
+               this.resource = result
            });
            
          } catch (e) {
