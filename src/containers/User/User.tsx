@@ -7,6 +7,7 @@ import UserStore from '../../stores/UserStore'
 import UserCard from '../../components/UserCard'
 import { useTranslation } from 'react-i18next'
 import ButtonSpinner from '../../components/ButtonSpinner';
+import Error from '../../components/Error';
 
 const User = observer(() => {
   const store = useInjection<UserStore>(ownTypes.userStore);
@@ -32,9 +33,7 @@ const User = observer(() => {
                 text={`${t('Search')}`}
             />
           </InputGroup>
-          {!!store.error && (
-            <p style={{ color: 'red', fontSize: 14 }}>{store.error}</p>
-          )}
+          <Error error={store.error}/>
           <UserCard user={store.user} />
         </Col>
       </Row>

@@ -7,6 +7,7 @@ import ResourceStore from '../../stores/ResourceStore'
 import ResourceCard from '../../components/ResourceCard'
 import { useTranslation } from 'react-i18next'
 import ButtonSpinner from '../../components/ButtonSpinner';
+import Error from '../../components/Error';
 
 const Resource = observer(() => {
   const store = useInjection<ResourceStore>(ownTypes.resourceStore);
@@ -32,9 +33,7 @@ const Resource = observer(() => {
                 text={`${t('Search')}`}
             />
           </InputGroup>
-          {!!store.error && (
-            <p style={{ color: 'red', fontSize: 14 }}>{store.error}</p>
-          )}
+          <Error error={store.error}/>
           <ResourceCard resource={store.resource} />
         </Col>
       </Row>
