@@ -26,11 +26,11 @@ const User = observer(() => {
               placeholder={t('placeholder')}
             />
             <ButtonSpinner
-                queryString={store.queryString}
-                variant="primary"
-                onClick={store.search}
-                isLoading={store.isLoading}
-                text={`${t('Search')}`}
+              queryString={store.queryString}
+              variant="primary"
+              onClick={store.search}
+              isLoading={store.isLoading}
+              text={`${t('Search')}`}
             />
           </InputGroup>
           <Error error={store.error}/>
